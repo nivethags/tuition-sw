@@ -1,0 +1,154 @@
+.subject-box {
+  background: linear-gradient(145deg, #f0f4ff, #ffffff);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 1.2rem 1rem;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.subject-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(25, 118, 210, 0.2);
+}
+
+.subject-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subject-logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 3px solid #1976d2;
+  margin-bottom: 8px;
+  object-fit: cover;
+}
+
+.subject-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0d47a1;
+}
+
+.subject-info {
+  background-color: #e3f2fd;
+  border-radius: 10px;
+  padding: 8px;
+  margin-top: 10px;
+}
+
+.teacher-name,
+.schedule-day {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 2px 0;
+  font-weight: 500;
+}
+
+.result-badge {
+  margin-top: 12px;
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background-color: #1976d2;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-badge:hover {
+  background-color: #125aa1;
+  box-shadow: 0 0 6px rgba(25, 118, 210, 0.5);
+}
+
+.result-available {
+  border: 2px solid #1976d2;
+}
+.subject-box {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 220px;
+  max-height: 220px;
+  overflow: hidden;
+}
+
+.subject-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+}
+
+.subject-logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #1976d2;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.subject-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a237e;
+}
+
+.subject-info {
+  background-color: #f5f8ff;
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.teacher-name,
+.schedule-day {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 3px 0;
+}
+
+.tick-icon {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 6px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  animation: scaleTick 0.3s ease;
+}
+
+/* Optional animation */
+@keyframes scaleTick {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.result-available {
+  border: 2px solid #1976d2;
+}

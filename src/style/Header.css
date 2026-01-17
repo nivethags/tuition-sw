@@ -1,0 +1,76 @@
+/* Header Container */
+.small-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  height: 60px;
+}
+
+/* Header Text */
+.header-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Profile container */
+.profile-container {
+  position: relative;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Profile image */
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  transition: 0.3s ease;
+}
+
+.profile-img:hover {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dropdown button */
+.dropdown-menu button {
+  background: none;
+  border: none;
+  font-size: 14px;
+  width: 100%;
+  text-align: left;
+  padding: 8px;
+  color: #333;
+  cursor: pointer;
+}
+
+.dropdown-menu button:hover {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}

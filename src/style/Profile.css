@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+:root {
+  --primary-color: #3a77f8;
+  --text-color: #2c3e50;
+  --light-text-color: #657786;
+  --bg-color: #f7f9fc;
+  --card-bg: #ffffff;
+  --shadow-color: rgba(58, 119, 248, 0.25);
+  --border-radius: 12px;
+  --transition-speed: 0.3s;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+.profile-page {
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+.profile-card {
+  max-width: 900px;
+  width: 100%;
+  border-radius: var(--border-radius);
+  /* box-shadow: 0 10px 30px var(--shadow-color); */
+  border:none;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  /* gap: 3rem;  */
+  padding: 2.5rem 3rem;
+}
+
+.profile-image-container {
+  width: 280px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 6px solid var(--primary-color);
+  box-shadow: 0 8px 25px var(--shadow-color);
+  transition: transform var(--transition-speed) ease;
+}
+
+.profile-image-container:hover {
+  transform: scale(1.05);
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.profile-name {
+  margin: 0;
+  font-weight: 700;
+  font-size: 2.4rem;
+  letter-spacing: 0.03em;
+}
+
+.profile-designation {
+  margin-top: -0.6rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.profile-info section {
+  background: #56483d73;
+  border-radius: 10px;
+  padding: 1.3rem 1.6rem;
+  box-shadow: inset 0 0 8px rgba(58, 119, 248, 0.1);
+}
+
+.profile-info section h2 {
+  margin: 0 0 0.6rem 0;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.4rem;
+  letter-spacing: 0.02em;
+}
+
+.profile-info section p {
+  margin: 0.2rem 0 0 0;
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.profile-contact a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+.profile-contact a:hover {
+  color: #1752d9;
+  text-decoration: underline;
+}
+
+.profile-joining time {
+  font-style: normal;
+  color: var(--light-text-color);
+  font-weight: 600;
+}
+
+.profile-marks table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.profile-marks th, .profile-marks td {
+    padding: 0.85rem 1.1rem;
+    text-align: left;
+    border-bottom: 1px solid #3a77f8;
+}
+.profile-marks th {
+  background-color: #e3ebff;
+  color: var(--primary-color);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.profile-marks td {
+  color:white;
+}
+
+.btn-edit {
+  align-self: start;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 0.9rem 2.4rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+  margin-top: 1rem;
+  width: fit-content;
+}
+
+.btn-edit:hover {
+  background-color: #2a58c7;
+  box-shadow: 0 6px 16px rgba(42, 88, 199, 0.5);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 720px) {
+  .profile-card {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+}
+  .profile-image-container {
+    margin: 0 auto;
+    width: 160px;
+    aspect-ratio: 1 / 1;
+  }
+
+  .btn-edit {
+    width: 100%;
+    text-align: center;
+  }
+}
+.profile-card {
+    gap: 0 !important;
+}
+.raise-request-btn {
+  margin-top: 16px;
+  padding: 10px 20px;
+  background-color: #ff9800;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.raise-request-btn:hover {
+  background-color: #fb8c00;
+  transform: translateY(-2px);
+}
+svg {
+    transform: rotate(-90deg);
+    width: 20px;
+    height: 20px;
+}

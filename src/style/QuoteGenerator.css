@@ -1,0 +1,94 @@
+.quote-container {
+  /* max-width: 87%; */
+  /* margin: 3rem auto; */
+  padding: 1rem;
+  background: linear-gradient(to right, #dbeafe, #fef9c3);
+  border-radius: 16px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+.quote-title {
+  color: #3b3b98;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.quote-card-wrapper {
+  min-height: 90px;
+}
+
+.quote-card {
+  /* padding: 1rem; */
+  border-radius: 12px;
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); */
+  position: relative;
+}
+
+.quote-text {
+  font-size: 1rem;
+  font-style: italic;
+  color: #333;
+}
+
+.quote-author {
+  color: #555;
+  font-weight: bold;
+}
+
+.quote-mark {
+  position: absolute;
+  font-size: 2.5rem;
+  color: #3b3b98;
+  top: 10px;
+  left: 10px;
+  opacity: 0.3;
+}
+
+.quote-mark.right {
+  top: auto;
+  bottom: 10px;
+  right: 10px;
+  left: auto;
+}
+.separator {
+  height: 2px;
+  background-color: #e0e0e0;
+  margin: 1.5rem 0;
+}
+
+.quote-author {
+  font-style: italic;
+  color: #666;
+}
+
+.quote-mark {
+  font-size: 2rem;
+  color: #4caf50;
+}
+
+.quote-mark.right {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+
+.management-message {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-left: 5px solid #00796b;
+  border-radius: 8px;
+  color: #333;
+  font-size: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.management-message h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #004d40;
+}

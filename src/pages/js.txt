@@ -1,0 +1,161 @@
+Array Add=>push(),unshift()(at the start)
+ArrayDelete =>pop(), shift()
+itrate=>  array.forEach((fruit=>log(fruit));
+
+
+
+splice=>add or remove in an array
+let colors = ["Red", "Green", "Blue"];
+colors.splice(1, 1, "Yellow", "Purple"); // Removes "Green", adds "Yellow" & "Purple"   (start,count,item1,item2,.....)
+console.log(colors); // ["Red", "Yellow", "Purple", "Blue"]
+
+
+
+
+slice(start, end) – Extract a part of the array (returns a new array)
+end=end_index-2;
+
+let numbers = [10, 20, 30, 40, 50];
+let newNumbers = numbers.slice(1, 4);  
+console.log(newNumbers); // [20, 30, 40]
+
+
+
+indexOf(value) – Get index of an element (returns -1 if not found)
+
+let cities = ["New York", "Paris", "London"];
+console.log(cities.indexOf("Paris")); // 1
+console.log(cities.indexOf("Tokyo")); // -1
+
+
+includes(value) – Check if an element exists
+
+
+console.log(cities.includes("London")); // true
+console.log(cities.includes("Tokyo")); // false
+
+
+
+find(callback) – Find the first element that matches a condition
+javascript
+Copy
+Edit
+let users = [
+    { id: 1, name: "Alice" },
+    { id: 2, name: "Bob" },
+    { id: 3, name: "Charlie" }
+];
+
+let user = users.find(user => user.id === 2);
+console.log(user); // { id: 2, name: "Bob" }
+
+
+findIndex(callback) – Get index of first matching element
+
+console.log(users.findIndex(user => user.name === "Charlie")); // 2
+
+
+
+ forEach(callback) – Loop through array elements
+let numbers = [1, 2, 3, 4];
+numbers.forEach(num => console.log(num * 2));
+// Output: 2, 4, 6, 8
+
+
+
+map(callback) – Transform each element (returns a new array)
+
+let doubled = numbers.map(num => num * 2);
+console.log(doubled); // [2, 4, 6, 8]
+
+
+filter(callback) – Get elements that match a condition
+
+let evenNumbers = numbers.filter(num => num % 2 === 0);
+console.log(evenNumbers); // [2, 4]
+
+
+differnce b/w normal function and arraow function 
+
+
+function showArgs() {
+    console.log(arguments); // Outputs: [1, 2, 3]
+}
+showArgs(1, 2, 3);
+
+
+const showArgs = () => {
+    console.log(arguments); // ❌ ERROR: arguments is not defined
+};
+showArgs(1, 2, 3);
+
+
+✅ Solution: Use rest parameters (...args) in arrow functions instead:
+
+javascript
+Copy
+Edit
+const showArgs = (...args) => {
+    console.log(args); // Outputs: [1, 2, 3]
+};
+showArgs(1, 2, 3);
+
+
+2️⃣ Constructor Function Difference (new keyword)
+A constructor function is used to create objects. Regular functions can be used as constructors, but arrow functions CANNOT because they don’t have their own this.
+
+✅ Regular Function (Can be used with new)
+
+function Person(name) {
+    this.name = name;
+}
+const p = new Person("Alice");
+console.log(p.name); // Alice
+
+
+❌ Arrow Function (Cannot be used as a constructor)
+
+const Person = (name) => {
+    this.name = name;
+};
+const p = new Person("Alice"); // ❌ ERROR: Person is not a constructor
+3️⃣ Implicit Return in Arrow Functions
+Arrow functions allow implicit return, meaning you don’t need the return keyword for single expressions.
+
+✅ Implicit Return (Shorter Syntax)
+
+const add = (a, b) => a + b; // No need for {} or return
+console.log(add(5, 3)); // 8
+
+
+❌ Explicit Return (When Using {})
+If you use {}, you MUST include return:
+
+
+const add = (a, b) => { return a + b; };
+console.log(add(5, 3)); // 8
+
+
+If {} is used without return, the function will return undefined:
+
+const add = (a, b) => { a + b; };
+console.log(add(5, 3)); // undefined ❌
+
+
+If you want to print or make changes to all elements selected with querySelectorAll(), you need to loop through them. 
+Since querySelectorAll() returns a NodeList, you can use methods like forEach() or a for...of loop.
+
+let elements = document.querySelectorAll(".myClass");
+
+elements.forEach((element) => {
+    console.log(element.innerText);  // Print each element's text
+    element.style.color = "blue";    // Change text color to blue
+});
+
+
+let elements = document.querySelectorAll(".myClass");
+
+for (let element of elements) {
+    console.log(element.innerText);
+    element.style.backgroundColor = "yellow";  // Change background color
+}

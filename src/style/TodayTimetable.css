@@ -1,0 +1,102 @@
+.today-timetable-container {
+  padding: 30px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.today-timetable-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.summary-widgets {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.widget {
+  padding: 15px 20px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  flex: 1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.total {
+  background-color: #1e88e5;
+}
+
+.assigned {
+  background-color: #43a047;
+}
+
+.unassigned {
+  background-color: #e53935;
+}
+
+.timetable-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.timetable-table th,
+.timetable-table td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.timetable-table th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  padding: 8px 12px;
+  margin-right: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: background 0.2s ease;
+}
+
+.edit-btn {
+  background-color: #1976d2;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #1565c0;
+}
+
+.delete-btn {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #b71c1c;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

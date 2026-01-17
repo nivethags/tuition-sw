@@ -1,0 +1,52 @@
+.upload-marks-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+  background-color: #f4f6f9;
+  border-radius: 10px;
+}
+
+.upload-marks-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.form-group select {
+  flex: 1;
+  padding: 10px;
+}
+
+.marks-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.marks-table th, .marks-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.marks-table input {
+  width: 80px;
+  padding: 5px;
+}
+
+.submit-btn {
+  display: block;
+  margin: 20px auto;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+}

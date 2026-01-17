@@ -1,0 +1,101 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* App.css or global stylesheet */
+.app-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+/* Sidebar.css */
+.sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease-in-out;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.sidebar.expanded {
+  width: 250px;
+}
+
+.sidebar .toggle-btn {
+  position: absolute;
+  top: 10px;
+  right: -30px;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 70%;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .sidebar.expanded {
+    transform: translateX(0);
+  }
+
+  .dashboard-content {
+    padding-top: 60px; /* space for toggle on top */
+  }
+}
+.dashboard-container{
+  margin-left: 0 !important;
+}

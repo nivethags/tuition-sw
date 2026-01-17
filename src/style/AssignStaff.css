@@ -1,0 +1,43 @@
+.assign-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: #f9f9f9;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.assign-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.assign-form label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.assign-form select,
+.assign-form button {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.assign-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.assign-form button:hover {
+  background-color: #0056b3;
+}
+
+.message {
+  margin-bottom: 15px;
+  color: green;
+}
