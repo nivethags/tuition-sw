@@ -2,7 +2,6 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
 
 const app = express();
 const db = require("./db");
@@ -38,11 +37,10 @@ app.post("/signup", async (req, res) => {
   }
 
   try {
-    const hashedPassword = await bcrypt.hash(password, 10);
 
     db.query(
       "INSERT INTO user (user_id, password) VALUES (?, ?)",
-      [username, hashedPassword],
+      [username, password],
       (err) => {
         if (err) {
           console.error(err);
