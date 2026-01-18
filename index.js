@@ -23,8 +23,6 @@ app.get("/", (req, res) => {
   res.send("Welcome");
 });
 
-
-
 // Routers
 const teacherRouter = require("./teacher");
 const adminRouter = require("./admin");
@@ -153,6 +151,10 @@ app.get("/profile", validateUser, (req, res) => {
 /* =========================
    SERVER
 ========================= */
+
+const PORT = process.env.PORT;
+
+
 app.listen(PORT, () =>
   console.log(`Backend running on port ${PORT}`)
 );
