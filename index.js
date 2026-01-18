@@ -1,12 +1,13 @@
-require("dotenv").config();
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
+
 const express = require("express");
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
 
 const app = express();
 const db = require("./db");
-
-const PORT = process.env.PORT || 5000;
 
 // Middlewares
 app.use(cors());
@@ -15,12 +16,14 @@ app.use(express.json());
 // Test route
 app.get("/", (req, res) => {
   console.log("MYSQLHOST:", process.env.MYSQLHOST);
-console.log("MYSQLUSER:", process.env.MYSQLUSER);
-console.log("MYSQLDATABASE:", process.env.MYSQLDATABASE);
-console.log("MYSQLPORT:", process.env.MYSQLPORT);
+  console.log("MYSQLUSER:", process.env.MYSQLUSER);
+  console.log("MYSQLDATABASE:", process.env.MYSQLDATABASE);
+  console.log("MYSQLPORT:", process.env.MYSQLPORT);
 
   res.send("Welcome");
 });
+
+
 
 // Routers
 const teacherRouter = require("./teacher");
